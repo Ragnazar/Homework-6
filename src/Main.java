@@ -29,7 +29,7 @@ public class Main {
         System.out.println();
 
         //3
-        char[] charList = {'a', 'b', 'c' };
+        char[] charList = {'a', 'b', 'c'};
         for (int j = 0; j < 2; j++) {
             System.out.printf("%c, ", charList[j]);
         }
@@ -59,7 +59,7 @@ public class Main {
         System.out.println();
 
         //3
-        char[] charList = {'a', 'b', 'c' };
+        char[] charList = {'a', 'b', 'c'};
         for (int j = 2; j > 0; j--) {
             System.out.printf("%c, ", charList[j]);
         }
@@ -68,12 +68,11 @@ public class Main {
 
     private static void task4() {
         int[] numbers = new int[3];
-        byte i = 0;
-        while (i <= 2) {
+        for (byte i = 0; i < numbers.length; i++) {
             numbers[i] = i + 1;
-            i++;
         }
-        for (byte j = 0; j < 3; j++) {
+
+        for (byte j = 0; j < numbers.length; j++) {
             if (numbers[j] % 2 != 0) {
                 numbers[j] = numbers[j] + 1;
             }
