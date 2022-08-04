@@ -14,7 +14,7 @@ public class Main {
         task4(numbers);
     }
 
-    public static void task2(int numbers[], double decimalNumbers[], char charList[]) {
+    public static void task2(int[] numbers, double[] decimalNumbers, char[] charList) {
 
         //1
         for (int i = 0; i < numbers.length; i++) {
@@ -45,7 +45,7 @@ public class Main {
         }
     }
 
-    private static void task3(int numbers[], double decimalNumbers[], char charList[]) {
+    private static void task3(int[] numbers, double[] decimalNumbers, char[] charList) {
         //1
         for (int i = numbers.length - 1; i >= 0; i--) {
             if (i == 0) {
@@ -75,7 +75,7 @@ public class Main {
         }
     }
 
-    private static void task4(int numbers[]) {
+    private static void task4(int[] numbers) {
 
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 2 != 0) {
