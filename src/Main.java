@@ -1,82 +1,87 @@
 public class Main {
     public static void main(String[] args) {
-        task1and2();
-        task3();
-        task4();
+
+        //task1
+        int[] numbers = new int[3];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
+        }
+        double[] decimalNumbers = {1.57, 7.654, 9.986};
+        char[] charList = {'a', 'b', 'c'};
+
+        task2(numbers, decimalNumbers, charList);
+        task3(numbers, decimalNumbers, charList);
+        task4(numbers);
     }
 
-    private static void task1and2() {
+    public static void task2(int numbers[], double decimalNumbers[], char charList[]) {
 
         //1
-        int[] numbers = new int[3];
-        byte i = 0;
-        while (i < 2) {
-            numbers[i] = i + 1;
-            System.out.printf("%d, ", numbers[i]);
-            i++;
-        }
-        numbers[2] = 3;
-        System.out.println(numbers[2]);
-
-        //2
-        double[] decimalNumbers = {1.57, 7.654, 9.986};
-        i = 0;
-        while (i < 2) {
-            System.out.printf("%.3f, ", decimalNumbers[i]);
-            i++;
-        }
-        System.out.printf("%.3f, ", decimalNumbers[2]);
-        System.out.println();
-
-        //3
-        char[] charList = {'a', 'b', 'c'};
-        for (int j = 0; j < 2; j++) {
-            System.out.printf("%c, ", charList[j]);
-        }
-        System.out.println(charList[2]);
-    }
-
-    private static void task3() {
-        //1
-        int[] numbers = new int[3];
-        byte i = 2;
-        while (i > 0) {
-            numbers[i] = i + 1;
-            System.out.printf("%d, ", numbers[i]);
-            i--;
-        }
-        numbers[0] = 1;
-        System.out.println(numbers[0]);
-
-        //2
-        double[] decimalNumbers = {1.57, 7.654, 9.986};
-        i = 2;
-        while (i > 0) {
-            System.out.printf("%.3f, ", decimalNumbers[i]);
-            i--;
-        }
-        System.out.printf("%.3f, ", decimalNumbers[0]);
-        System.out.println();
-
-        //3
-        char[] charList = {'a', 'b', 'c'};
-        for (int j = 2; j > 0; j--) {
-            System.out.printf("%c, ", charList[j]);
-        }
-        System.out.println(charList[0]);
-    }
-
-    private static void task4() {
-        int[] numbers = new int[3];
-        for (byte i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 1;
-        }
-
-        for (byte j = 0; j < numbers.length; j++) {
-            if (numbers[j] % 2 != 0) {
-                numbers[j] = numbers[j] + 1;
+        for (int i = 0; i < numbers.length; i++) {
+            if (i == numbers.length - 1) {
+                System.out.println(numbers[i]);
+            } else {
+                System.out.printf("%d, ", numbers[i]);
             }
-            System.out.print(numbers[j] + " ");
+        }
+
+        //2
+        for (int i = 0; i < decimalNumbers.length; i++) {
+            if (i == decimalNumbers.length - 1) {
+                System.out.println(decimalNumbers[i]);
+            } else {
+                System.out.printf("%.3f, ", decimalNumbers[i]);
+            }
+        }
+
+        //3
+
+        for (int i = 0; i < charList.length; i++) {
+            if (i == charList.length - 1) {
+                System.out.println(charList[i]);
+            } else {
+                System.out.printf("%c, ", charList[i]);
+            }
+        }
+    }
+
+    private static void task3(int numbers[], double decimalNumbers[], char charList[]) {
+        //1
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(numbers[i]);
+            } else {
+                System.out.printf("%d, ", numbers[i]);
+            }
+        }
+
+        //2
+        for (int i = decimalNumbers.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(decimalNumbers[i]);
+            } else {
+                System.out.printf("%.3f, ", decimalNumbers[i]);
+            }
+        }
+
+        //3
+
+        for (int i = charList.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(charList[i]);
+            } else {
+                System.out.printf("%c, ", charList[i]);
+            }
+        }
+    }
+
+    private static void task4(int numbers[]) {
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 != 0) {
+                numbers[i] = numbers[i] + 1;
+            }
+            System.out.print(numbers[i] + " ");
         }
     }
 }
